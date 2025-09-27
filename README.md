@@ -2,6 +2,10 @@
 
 **Live demo:** https://vatsala2904.github.io/amex-adpm-spend-insights/
 
+## Demo Image
+![Spend Insights — screenshot](docs/demo.png)
+
+
 
 # Data Quality Summary
 - rows: 3
