@@ -1,6 +1,7 @@
-# <PROJECT NAME>
-Problem → Design → Run locally → Tests → Results.
+# Spend Insights Dashboard (Demo)
+Docs-first case study for an ADPM-style analytics product.
 
-Badges (activate after first run):
-![CI](https://github.com/vatsala2904/<REPO>/actions/workflows/ci.yml/badge.svg)
-![CodeQL](https://github.com/vatsala2904/<REPO>/actions/workflows/codeql.yml/badge.svg)
+## Scope v0
+- Sample spend CSV
+- Data-quality rules
+- KPI tree for faster monthly close
