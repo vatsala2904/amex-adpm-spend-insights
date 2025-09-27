@@ -1,4 +1,4 @@
-## Next
-- M0: sample data + quality rules (done)
-- M1: ingest script that computes: null rate, duplicate rate, valid-category %, total spend by month
-- M2: minimal React table + 3 KPIs + GIF
+## Run locally
+Python 3.10+
+```bash
+python ingest/compute_metrics.py
