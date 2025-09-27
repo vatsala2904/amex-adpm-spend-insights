@@ -1,0 +1,28 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node project present?
+        id: has_node
+        run: |
+          if [ -f package.json ]; then echo "yes=true" >> $GITHUB_OUTPUT; else echo "yes=false" >> $GITHUB_OUTPUT; fi
+
+      - if: steps.has_node.outputs.yes == 'true'
+        uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - if: steps.has_node.outputs.yes == 'true'
+        run: npm ci --ignore-scripts
+
+      - if: steps.has_node.outputs.yes == 'true'
+        run: npm test --if-present
+
+      - if: steps.has_node.outputs.yes == 'true'
+        run: npm run build --if-present
+
+      - if: steps.has_node.outputs.yes != 'true'
+        run: echo "No package.json; skipping Node steps."
